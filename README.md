@@ -193,7 +193,3 @@ SSH-настройку из `ssh/99-linux-server-lab.conf` нужно устан
 | Не работает мониторинг | `sudo systemctl status server-monitor.service`, `sudo tail /var/log/linux-server-lab/monitor.log` |
 | Не создаётся backup | `sudo tail /var/log/linux-server-lab/backup.log`, свободное место через `df -h` |
 | Не запускается cron | `sudo systemctl status cron`, `sudo crontab -l` |
-
-## Важно
-
-В GitHub не нужно добавлять приватные ключи, пароли, токены и файлы с секретами. Файл `admin-access.key` уже исключён через `.gitignore`.
