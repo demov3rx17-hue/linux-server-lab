@@ -1,0 +1,25 @@
+active
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+HTTP/1.1 200 OK
+Server: nginx
+Date: Tue, 01 Sep 2026 13:31:26 GMT
+Content-Type: text/html
+Content-Length: 319
+Last-Modified: Tue, 01 Sep 2026 12:43:04 GMT
+Connection: keep-alive
+ETag: "6a96c858-13f"
+Accept-Ranges: bytes
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Linux Server Lab</title>
+  </head>
+  <body>
+    <h1>Linux Server Lab</h1>
+    <p>Nginx serves this static page from <code>/var/www/site</code>.</p>
+  </body>
+</html>

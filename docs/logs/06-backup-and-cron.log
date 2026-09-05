@@ -1,0 +1,16 @@
+2026-09-01 09:01:47 | Backup started: /var/backups/linux-server-lab/site-backup_2026-09-01_09-01-47.tar.gz
+2026-09-01 09:01:47 | Archive verified: 8.0K
+2026-09-01 09:01:47 | Backup completed successfully
+2026-09-01 09:01:47 | Backup started: /var/backups/linux-server-lab/site-backup_2026-09-01_09-01-47.tar.gz
+2026-09-01 09:01:47 | Archive verified: 8.0K
+2026-09-01 09:01:47 | Backup completed successfully
+2026-09-01 09:01:47 | Backup started: /var/backups/linux-server-lab/site-backup_2026-09-01_09-01-47.tar.gz
+2026-09-01 09:01:47 | Archive verified: 8.0K
+2026-09-01 09:01:47 | Backup completed successfully
+total 32K
+-rw-r--r-- 1 root root 7.9K Sep  1 08:43 site-backup_2026-09-01_08-43-05.tar.gz
+-rw-r--r-- 1 root root 7.9K Sep  1 08:59 site-backup_2026-09-01_08-59-51.tar.gz
+-rw-r--r-- 1 root root 7.9K Sep  1 09:00 site-backup_2026-09-01_09-00-12.tar.gz
+-rw-r--r-- 1 root root 7.9K Sep  1 09:01 site-backup_2026-09-01_09-01-47.tar.gz
+# Run at 02:30 every day. Install with: sudo crontab cron/backup.cron
+30 2 * * * /usr/local/sbin/backup.sh

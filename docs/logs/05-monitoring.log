@@ -1,0 +1,25 @@
+○ server-monitor.service - Linux Server Lab health monitor
+     Loaded: loaded (/etc/systemd/system/server-monitor.service; disabled; preset: enabled)
+     Active: inactive (dead) since Tue 2026-09-01 09:35:31 EDT; 1s ago
+ Invocation: c0ec78ae13064a179b8316d99aa8c82b
+TriggeredBy: ● server-monitor.timer
+    Process: 4992 ExecStart=/usr/local/bin/server-monitor.sh (code=exited, status=0/SUCCESS)
+   Main PID: 4992 (code=exited, status=0/SUCCESS)
+   Mem peak: 3.3M
+        CPU: 41ms
+
+Sep 01 09:35:31 lab-srv-01 systemd[1]: Starting server-monitor.service - Linux Server Lab health monitor...
+Sep 01 09:35:31 lab-srv-01 systemd[1]: server-monitor.service: Deactivated successfully.
+Sep 01 09:35:31 lab-srv-01 systemd[1]: Finished server-monitor.service - Linux Server Lab health monitor.
+NEXT                            LEFT LAST                              PASSED UNIT                 ACTIVATES
+Tue 2026-09-01 09:40:31 EDT 4min 58s Tue 2026-09-01 09:33:39 EDT 1min 53s ago server-monitor.timer server-monitor.service
+
+1 timers listed.
+Pass --all to see loaded but inactive timers, too.
+CPU: OK
+RAM: OK
+DISK: OK
+NGINX: OK
+SSH: OK
+DOCKER: OK
+METRICS: cpu=4% ram=20% disk=7%

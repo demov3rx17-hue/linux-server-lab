@@ -1,0 +1,6 @@
+$ ssh -i ~/.ssh/linux-server-lab-admin -p 2222 admin@SERVER_IP 'whoami; hostname; id -nG'
+admin
+lab-srv-01
+admin sudo admins
+
+# Authentication was performed with the admin SSH key. Password authentication is disabled.

@@ -1,0 +1,14 @@
+# Credentials and private SSH material must never be versioned.
+*.key
+*.pem
+id_*
+!.gitignore
+.env
+secrets/
+
+# Runtime logs and generated backups are stored on the server, not in Git.
+*.log
+backups/
+
+# Curated, redacted verification logs are evidence for the portfolio.
+!docs/logs/*.log

@@ -1,0 +1,20 @@
+uid=1002(admin) gid=1005(admin) groups=1005(admin),27(sudo),1002(admins)
+uid=1001(operator) gid=37(operator) groups=37(operator),100(users),1001(sysops),1003(operators)
+uid=1003(developer) gid=1006(developer) groups=1006(developer),1004(developers)
+
+[operator sudo policy]
+Matching Defaults entries for operator on lab-srv-01:
+    env_reset, mail_badpass,
+    secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin,
+    use_pty
+
+User operator may run the following commands on lab-srv-01:
+    (root) NOPASSWD: /usr/bin/systemctl status nginx, /usr/bin/systemctl
+        restart nginx, /usr/bin/systemctl status server-monitor.service,
+        /usr/bin/journalctl -u nginx, /usr/bin/journalctl -u
+        server-monitor.service
+
+[isolated directories]
+drwxrwx--- admin:admins /srv/admin
+drwxrwx--- operator:operators /srv/operator
+drwxrwx--- developer:developers /srv/developer

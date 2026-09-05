@@ -1,0 +1,2 @@
+# Run at 02:30 every day. Install with: sudo crontab cron/backup.cron
+30 2 * * * /usr/local/sbin/backup.sh

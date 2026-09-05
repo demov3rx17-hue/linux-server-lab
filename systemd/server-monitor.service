@@ -1,0 +1,12 @@
+[Unit]
+Description=Linux Server Lab health monitor
+After=network.target nginx.service ssh.service docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/server-monitor.sh
+StandardOutput=append:/var/log/linux-server-lab/monitor.log
+StandardError=append:/var/log/linux-server-lab/monitor-error.log
+
+[Install]
+WantedBy=multi-user.target

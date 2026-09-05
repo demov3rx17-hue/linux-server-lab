@@ -1,0 +1,23 @@
+Status: active
+
+     To                         Action      From
+     --                         ------      ----
+[ 1] 2222/tcp                   ALLOW IN    Anywhere                   # SSH custom port
+[ 2] 80/tcp                     ALLOW IN    Anywhere                   # HTTP Nginx
+[ 3] 443/tcp                    ALLOW IN    Anywhere                   # HTTPS Nginx
+[ 4] 51820/udp                  ALLOW IN    Anywhere                   # WireGuard
+[ 5] 2222/tcp (v6)              ALLOW IN    Anywhere (v6)              # SSH custom port
+[ 6] 80/tcp (v6)                ALLOW IN    Anywhere (v6)              # HTTP Nginx
+[ 7] 443/tcp (v6)               ALLOW IN    Anywhere (v6)              # HTTPS Nginx
+[ 8] 51820/udp (v6)             ALLOW IN    Anywhere (v6)              # WireGuard
+
+
+[listening sockets]
+Netid State  Recv-Q Send-Q                    Local Address:Port  Peer Address:PortProcess                                                                         
+udp   UNCONN 0      0                       192.168.239.129:68         0.0.0.0:*    users:(("dhcpcd",pid=1290,fd=3))                                               
+udp   UNCONN 0      0      [fe80::116:7e92:c50d:3d11]%ens33:546           [::]:*    users:(("dhcpcd",pid=1271,fd=3))                                               
+tcp   LISTEN 0      511                             0.0.0.0:80         0.0.0.0:*    users:(("nginx",pid=2114,fd=5),("nginx",pid=2113,fd=5),("nginx",pid=2110,fd=5))
+tcp   LISTEN 0      128                             0.0.0.0:2222       0.0.0.0:*    users:(("sshd",pid=969,fd=6))                                                  
+tcp   LISTEN 0      4096                          127.0.0.1:38353      0.0.0.0:*    users:(("containerd",pid=2073,fd=9))                                           
+tcp   LISTEN 0      511                                [::]:80            [::]:*    users:(("nginx",pid=2114,fd=6),("nginx",pid=2113,fd=6),("nginx",pid=2110,fd=6))
+tcp   LISTEN 0      128                                [::]:2222          [::]:*    users:(("sshd",pid=969,fd=7))                                                  
